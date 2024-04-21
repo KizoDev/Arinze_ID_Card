@@ -1,14 +1,33 @@
 // ignore_for_file: unnecessary_brace_in_string_interps
 
+import 'package:arinzecard/pages/Home.dart';
+import 'package:arinzecard/util/color.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(
-      MaterialApp(
-        home: ArinzeCard(),
-      ),
-    );
+void main() => runApp(new MyApp());
 
-class ArinzeCard extends StatefulWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        brightness: Brightness.light,
+        primaryColor: AppColors.bgColor,
+      ),
+      home: Home(),
+    );
+  }
+}
+
+
+
+
+
+
+/*class ArinzeCard extends StatefulWidget {
   @override
   State<ArinzeCard> createState() => _ArinzeCardState();
 }
@@ -112,3 +131,4 @@ class _ArinzeCardState extends State<ArinzeCard> {
     );
   }
 }
+*/
